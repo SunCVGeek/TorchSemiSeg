@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: Launch",
+        "type": "python",
+        "request": "launch",
+        "program": "/data/opt/anaconda3/envs/mmseg/lib/python3.7/site-packages/torch/distributed/launch.py",
+        "python": "/data/opt/anaconda3/envs/mmseg/bin/python",
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "args": [
+          "--nproc_per_node=1",
+          "exp.city/city8.res50v3+.CPS/train.py"
+        ],
+        "env": {
+            "volna": "/data/my_research/dl_semi/TorchSemiSeg/",
+            "OUTPUT_PATH": "./workdir",
+            "snapshot_dir":"./workdir/snapshot",
+            "earning_rate": "0.02",
+            "batch_size":"2",
+            "snapshot_iter":"5"
+          }
+      }
+    ]
+  }
+  
